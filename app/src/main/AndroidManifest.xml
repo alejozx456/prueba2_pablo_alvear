@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Usuario_Login_PAAV"></activity>
         <activity
-            android:name="example.com.prueba2_pablo_alvear.MainActivity"
+            android:name=".MainActivity_PAAV"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
@@ -22,13 +22,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="example.com.prueba2_pablo_alvear.SettingsActivity"
+            android:name=".SettingsActivity_PAAV"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="example.com.prueba2_pablo_alvear.MainActivity"
+            android:parentActivityName=".MainActivity_PAAV"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="example.com.prueba2_pablo_alvear.MainActivity" />
+                android:value="example.com.prueba2_pablo_alvear.MainActivity_PAAV" />
         </activity>
     </application>
 

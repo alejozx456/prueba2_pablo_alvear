@@ -10,7 +10,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 import android.util.Log;
-public class ResultsDialogFragment extends DialogFragment {
+public class ResultsDialogFragment_PAAV extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +18,8 @@ public class ResultsDialogFragment extends DialogFragment {
     }
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final QuizViewModel quizViewModel = ViewModelProviders.of((FragmentActivity) getActivity()).get(QuizViewModel.class);
-        int totalGuesses = quizViewModel.getTotalGuesses();
+        final QuizViewModel_PAAV quizViewModelPAAV = ViewModelProviders.of((FragmentActivity) getActivity()).get(QuizViewModel_PAAV.class);
+        int totalGuesses = quizViewModelPAAV.getTotalGuesses();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(
                 getString(R.string.results, totalGuesses, (1000 / (double) totalGuesses)));
@@ -28,15 +28,15 @@ public class ResultsDialogFragment extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try{
-                    MainActivityFragment quizFragment = (MainActivityFragment) getParentFragment();
+                    MainActivityFragment_PAAV quizFragment = (MainActivityFragment_PAAV) getParentFragment();
                     try{
                         quizFragment.resetQuiz();
                     }catch (Exception e){
-                        Log.e(quizViewModel.getTag(),"Unable to call resetQuiz()", e);
+                        Log.e(quizViewModelPAAV.getTag(),"Unable to call resetQuiz()", e);
                     }
                 }
                 catch (Exception e){
-                    Log.e(quizViewModel.getTag(),"Unable to get ActivityMainFragment", e);
+                    Log.e(quizViewModelPAAV.getTag(),"Unable to get ActivityMainFragment", e);
                 }
             }
         });

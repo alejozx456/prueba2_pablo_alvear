@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="example.com.prueba2_pablo_alvear.SettingsActivityFragment"
+        android:name="example.com.prueba2_pablo_alvear.SettingsActivityFragment_PAAV"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings_paav" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/quizFragment"
-        android:name="example.com.prueba2_pablo_alvear.MainActivityFragment"
+        android:name="example.com.prueba2_pablo_alvear.MainActivityFragment_PAAV"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -49,6 +49,6 @@
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main_paav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

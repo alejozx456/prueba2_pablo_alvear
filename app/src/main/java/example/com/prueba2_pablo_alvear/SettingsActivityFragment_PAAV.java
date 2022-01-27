@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import androidx.annotation.Nullable;
 
-public class SettingsActivityFragment extends PreferenceFragment {
+public class SettingsActivityFragment_PAAV extends PreferenceFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

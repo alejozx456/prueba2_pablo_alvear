@@ -11,13 +11,13 @@ import android.view.Menu;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_PAAV extends AppCompatActivity {
     public static final String CHOICES = "pref_numberOfChoices";
     public static final String REGIONS = "pref_regionsToInclude";
     private boolean deviceIsPhone = true;
     private boolean preferencesChanged = true;
-    private MainActivityFragment quizFragment;
-    private QuizViewModel quizViewModel;
+    private MainActivityFragment_PAAV quizFragment;
+    private QuizViewModel_PAAV quizViewModelPAAV;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
     private void setSharedPreferences() {
         // set default values in the app's SharedPreferences
@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.quizViewModel = ViewModelProviders.of(this).get(QuizViewModel.class);
-        this.preferencesChangeListener = new PreferenceChangeListener(this);
-        setContentView(R.layout.activity_main);
+        this.quizViewModelPAAV = ViewModelProviders.of(this).get(QuizViewModel_PAAV.class);
+        this.preferencesChangeListener = new PreferenceChangeListener_PAAV(this);
+        setContentView(R.layout.activity_main_paav);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         this.setSharedPreferences();
@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (preferencesChanged) {
-            this.quizFragment = (MainActivityFragment) getSupportFragmentManager()
+            this.quizFragment = (MainActivityFragment_PAAV) getSupportFragmentManager()
                     .findFragmentById(R.id.quizFragment);
-            this.quizViewModel.setGuessRows(PreferenceManager.getDefaultSharedPreferences(this)
+            this.quizViewModelPAAV.setGuessRows(PreferenceManager.getDefaultSharedPreferences(this)
                     .getString(CHOICES, null));
-            this.quizViewModel.setRegionsSet(PreferenceManager.getDefaultSharedPreferences(this)
+            this.quizViewModelPAAV.setRegionsSet(PreferenceManager.getDefaultSharedPreferences(this)
                     .getStringSet(REGIONS, null));
 
             this.quizFragment.resetQuiz();
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             // Inflate the menu; this adds items to the action bar if it is present.
-            getMenuInflater().inflate(R.menu.menu_main, menu);
+            getMenuInflater().inflate(R.menu.menu_main_paav, menu);
             return true;
         } else {
             return false;
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent preferencesIntent = new Intent(this, SettingsActivity.class);
+        Intent preferencesIntent = new Intent(this, SettingsActivity_PAAV.class);
         startActivity(preferencesIntent);
         return super.onOptionsItemSelected(item);
     }
@@ -88,12 +88,12 @@ public class MainActivity extends AppCompatActivity {
                 Configuration.SCREENLAYOUT_SIZE_MASK;
     }
 
-    public MainActivityFragment getQuizFragment() {
+    public MainActivityFragment_PAAV getQuizFragment() {
         return this.quizFragment;
     }
 
-    public QuizViewModel getQuizViewModel() {
-        return quizViewModel;
+    public QuizViewModel_PAAV getQuizViewModelPAAV() {
+        return quizViewModelPAAV;
     }
 
     public static String getCHOICES() {
