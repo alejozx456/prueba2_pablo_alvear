@@ -18,6 +18,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/IdUsuariosParaIngresar1"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="596dp"
+        android:text="alejozx456"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idUsuariosParaIngresar2"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="596dp"
+        android:text="pablozx456"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idPasswordParaIngresar"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="644dp"
+        android:text="aaa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idPasswordParaIngresar2"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="648dp"
+        android:text="bbb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/IdTitulo"
         android:layout_width="201dp"
         android:layout_height="54dp"
