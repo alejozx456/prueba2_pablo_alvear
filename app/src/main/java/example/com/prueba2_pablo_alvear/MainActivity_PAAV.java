@@ -42,7 +42,7 @@ public class MainActivity_PAAV extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String dato=getIntent().getStringExtra("usuario");
-        
+
         this.quizViewModelPAAV = ViewModelProviders.of(this).get(QuizViewModel_PAAV.class);
         this.preferencesChangeListener = new PreferenceChangeListener_PAAV(this);
         setContentView(R.layout.activity_main_paav);

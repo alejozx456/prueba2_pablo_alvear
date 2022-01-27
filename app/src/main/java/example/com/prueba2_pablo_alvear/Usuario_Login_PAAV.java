@@ -31,10 +31,22 @@ public class Usuario_Login_PAAV extends AppCompatActivity {
 
     }
     public void IngresarPAAV(View view){
-        Intent i = new Intent(this,MainActivity_PAAV.class);
+        String usuariop=usuario.getText().toString();
+        String passwordp=password.getText().toString();
+        if(usuariop.equals(user1) && passwordp.equals(passusser1)){
+            Intent i = new Intent(this,MainActivity_PAAV.class);
 
-            i.putExtra("usuario",user1.toString());
+            i.putExtra("usuario",user1);
             startActivity(i);
+        }else if(usuariop.equals(user2) && passwordp.equals(passusser2)){
+            Intent i = new Intent(this,MainActivity_PAAV.class);
+
+            i.putExtra("usuario2",user2);
+            startActivity(i);
+        }else {
+            Toast.makeText(this,"Error en las credenciales",Toast.LENGTH_LONG).show();
+        }
+
 
 
 
