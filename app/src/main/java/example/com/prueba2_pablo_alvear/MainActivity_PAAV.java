@@ -10,8 +10,10 @@ import androidx.lifecycle.ViewModelProviders;
 import android.view.Menu;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity_PAAV extends AppCompatActivity {
+    private TextView usuariomostrado;
     public static final String CHOICES = "pref_numberOfChoices";
     public static final String REGIONS = "pref_regionsToInclude";
     private boolean deviceIsPhone = true;
@@ -39,6 +41,8 @@ public class MainActivity_PAAV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String dato=getIntent().getStringExtra("usuario");
+        
         this.quizViewModelPAAV = ViewModelProviders.of(this).get(QuizViewModel_PAAV.class);
         this.preferencesChangeListener = new PreferenceChangeListener_PAAV(this);
         setContentView(R.layout.activity_main_paav);
