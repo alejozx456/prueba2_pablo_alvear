@@ -37,11 +37,13 @@ public class Usuario_Login_PAAV extends AppCompatActivity {
             Intent i = new Intent(this,MainActivity_PAAV.class);
 
             i.putExtra("usuario",user1);
+            Toast.makeText(this,"Bienvenido",Toast.LENGTH_LONG).show();
             startActivity(i);
         }else if(usuariop.equals(user2) && passwordp.equals(passusser2)){
             Intent i = new Intent(this,MainActivity_PAAV.class);
 
             i.putExtra("usuario2",user2);
+            Toast.makeText(this,"Bienvenido",Toast.LENGTH_LONG).show();
             startActivity(i);
         }else {
             Toast.makeText(this,"Error en las credenciales",Toast.LENGTH_LONG).show();
