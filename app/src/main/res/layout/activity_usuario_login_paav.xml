@@ -7,12 +7,72 @@
     tools:context=".Usuario_Login_PAAV">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
-        android:text="TextView"
+        android:id="@+id/IdTextViewUsuarioNombre"
+        android:layout_width="205dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="168dp"
+        android:text="Usuario"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/IdTitulo"
+        android:layout_width="201dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/text_view_titulo_login_paav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/IdTextViewUsuarioPassword"
+        android:layout_width="205dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="340dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/IdUsuarioPAAV"
+        android:layout_width="204dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edit_text_usuario_paav"
+        app:layout_constraintEnd_toEndOf="@+id/IdTextViewUsuarioNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/IdTextViewUsuarioNombre"
+        app:layout_constraintTop_toBottomOf="@+id/IdTextViewUsuarioNombre" />
+
+    <EditText
+        android:id="@+id/IdPasswordPAAV"
+        android:layout_width="204dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="232dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edit_text_pass_paav"
+        app:layout_constraintEnd_toEndOf="@+id/IdTextViewUsuarioNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/IdTextViewUsuarioNombre"
+        app:layout_constraintTop_toBottomOf="@+id/IdTextViewUsuarioNombre" />
+
+    <Button
+        android:id="@+id/IdButtonIngresarPAAV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/edit_text_button_ingresar_paav"
+        app:layout_constraintEnd_toEndOf="@+id/IdPasswordPAAV"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="@+id/IdPasswordPAAV"
+        app:layout_constraintTop_toBottomOf="@+id/IdPasswordPAAV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

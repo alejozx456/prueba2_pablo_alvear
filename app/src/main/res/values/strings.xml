@@ -17,5 +17,9 @@
     <string name="image_description">Image of the current flag in the quiz</string>
     <string name="default_region">Europe</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="text_view_titulo_login_paav">Login</string>
+    <string name="edit_text_usuario_paav">Ingrese Usuario</string>
+    <string name="edit_text_pass_paav">Ingrese la clave</string>
+    <string name="edit_text_button_ingresar_paav">Ingresar</string>
 
 </resources>
